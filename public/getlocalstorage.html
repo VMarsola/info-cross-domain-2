@@ -17,11 +17,14 @@
      */
     window.addEventListener("message", function (event) {
       if (event.origin === PERMITTED_DOMAIN) {
-        //var msg = JSON.parse(event.data);
-        // var msgKey = Object.keys(msg)[0];
+        var msg = JSON.parse(event.data);
+        var msgKey = Object.keys(msg)[0];
+        console.log("before if", msg, msgKey);
         if (event.data) {
+          console.log("event", event.data);
           localStorage.setItem("localstorage", event.data);
         } else {
+          console.log("else");
           localStorage.removeItem("localstorage");
         }
       }
