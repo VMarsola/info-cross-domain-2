@@ -17,7 +17,10 @@
      */
     console.log("fora do listener");
     window.addEventListener("message", function (event) {
+      console.log("event message triggered");
+
       if (event.origin === PERMITTED_DOMAIN) {
+        console.log("event.origin if");
         var msg = JSON.parse(event.data);
         var msgKey = Object.keys(msg)[0];
         console.log("before if", msg, msgKey);
