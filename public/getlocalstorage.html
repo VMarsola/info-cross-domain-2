@@ -15,6 +15,7 @@
     /**
      * Receiving message from other domain
      */
+    console.log("fora do listener");
     window.addEventListener("message", function (event) {
       if (event.origin === PERMITTED_DOMAIN) {
         var msg = JSON.parse(event.data);
