@@ -17,6 +17,7 @@
      */
     console.log("fora do listener");
     window.addEventListener("message", function (event) {
+      alert("chegou!");
       console.log("event message triggered");
 
       if (event.origin === PERMITTED_DOMAIN) {
