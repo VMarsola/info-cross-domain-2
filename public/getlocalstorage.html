@@ -18,8 +18,8 @@
           var msg = JSON.parse(event.data);
           var msgKey = Object.keys(msg)[0];
           if (event.data) {
-            console.log(event.data);
-            localStorage.setItem("localstorage", event.data);
+            console.log(event.data, msg);
+            localStorage.setItem("user", event.data);
           } else {
             // localStorage.removeItem("localstorage");
           }
